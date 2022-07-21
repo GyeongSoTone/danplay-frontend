@@ -1,0 +1,116 @@
+@import '../common/pallete';
+
+.date-container {
+  width: 290px;
+  height: 22px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  .calendar-icon {
+    float: left;
+    margin: 0 7px;
+    cursor: pointer;
+  }
+
+  > input {
+    display: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 150px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 100px;
+  }
+
+  @media screen and (max-width: 460px) {
+    width: 80vw;
+  }
+}
+
+.container {
+  padding: 2vh 1.2vw 1.5vh;
+
+  .search-box {
+    background-color: $BACKGROUND_GRAY;
+    display: flex;
+    border-radius: 15px;
+    width: 100%;
+    padding: 2vh 3vw;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 460px) {
+      flex-direction: column;
+    }
+
+    .search-option {
+      display: flex;
+      font-size: 12px;
+      color: $BLACK;
+      align-items: center;
+
+      &.search-date {
+        @media screen and (max-width: 460px) {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .search-label {
+            display: flex;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      + .search-option {
+        margin-top: 13px;
+      }
+
+      .search-label {
+        font-size: 14px;
+        font-weight: 700;
+        width: 55px;
+        text-align: left;
+        margin-right: 1.5vw;
+      }
+
+      .search-wave {
+        margin: 0 0.5vw;
+      }
+
+      .radio-label {
+        margin: 0 2vw 0 0.45vw;
+      }
+    }
+
+    .form-btn {
+      width: 94px;
+      height: 37px;
+      background-color: rgba($POINT_BLUE, 0.6);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $POINT_BLUE;
+      }
+
+      @media screen and (max-width: 460px) {
+        width: 100%;
+        height: 25px;
+        margin-top: 15px;
+      }
+    }
+  }
+}

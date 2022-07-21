@@ -1,0 +1,27 @@
+@import '../common/pallete';
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    padding: 0px 12px;
+
+    .menu-item {
+        font-size: 16px;
+        color: $BLACK;
+        padding: 3px;
+        cursor: pointer;
+
+        + .menu-item {
+            margin-left: 36px;
+
+            @media screen and (max-width : 400px) {
+                margin-left: 10px;
+            }
+        }
+
+        &.selected {
+            font-weight: 700;
+            border-bottom: 3px solid $POINT_BLUE;
+        }
+    }
+}
